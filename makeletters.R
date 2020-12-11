@@ -7,16 +7,18 @@ names(details)
 file.remove(dir)
 dir.create(dir)
 
-content <- readLines("template/letter.tex")
-detailscurrent <- as.character(as.vector(details[1,]))
-
-gsub("ut","ot",
-     content)
-
-writeLines(content)
-
 if (!file.exists(dir)){
   print('dir does not exist')
 } else {
   print('dir already exists')
 }
+
+detailscurrent <- as.character(as.vector(details[1,]))
+
+filename <- "checkletter/letter.tex"
+fileconnection <- file(filename)
+content <- readLines(filename)
+writeLines(content, fileconnection)
+close(fileconnection)
+
+
