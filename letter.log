@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.11)  11 DEC 2020 18:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.11)  11 DEC 2020 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -168,7 +168,7 @@ File: l3backend-pdfmode.def 2020-05-05 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count181
 \l__pdf_internal_box=\box45
 )
-(output/lettertest/letter.aux)
+(./letter.aux)
 \openout1 = `letter.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -189,8 +189,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 \AtBeginShipoutBox=\box46
 Package hyperref Info: Link coloring OFF on input line 36.
-
-(/home/jwr/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/home/jwr/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
 (/home/jwr/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -205,7 +204,7 @@ LaTeX Info: Redefining \ref on input line 36.
 LaTeX Info: Redefining \pageref on input line 36.
 LaTeX Info: Redefining \nameref on input line 36.
 
-(output/lettertest/letter.out) (output/lettertest/letter.out)
+(./letter.out) (./letter.out)
 \@outlinefile=\write3
 \openout3 = `letter.out'.
 
@@ -259,7 +258,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--46
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 61.
 
-(output/lettertest/letter.aux)
+(./letter.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
 Package rerunfilecheck Info: File `letter.out' has not changed.
@@ -268,7 +267,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
  4815 strings out of 482604
- 75932 string characters out of 5952182
+ 75760 string characters out of 5952182
  331569 words of memory out of 5000000
  20362 multiletter control sequences out of 15000+600000
  532646 words of font info for 25 fonts, out of 8000000 for 9000
@@ -276,7 +275,7 @@ Here is how much of TeX's memory you used:
  34i,6n,29p,253b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
 </home/jwr/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></ho
 me/jwr/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on output/lettertest/letter.pdf (1 page, 34743 bytes).
+Output written on letter.pdf (1 page, 34743 bytes).
 PDF statistics:
  20 PDF objects out of 1000 (max. 8388607)
  14 compressed objects within 1 object stream

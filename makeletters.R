@@ -34,3 +34,5 @@ for (j in nrow(details)){
 
 writeLines(contentadj, fileconnection)
 close(fileconnection)
+
+system(paste("pdflatex", filename))
