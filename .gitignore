@@ -1,6 +1,8 @@
 output
 pdf
 
+details.csv
+
 .Rproj.user
 .Rhistory
 .RData
