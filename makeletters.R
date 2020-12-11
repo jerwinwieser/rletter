@@ -1,38 +1,35 @@
+
 details <- read.csv2("details.csv", stringsAsFactors = F)
+detailscase <- details[1,]
 
-# dir <- paste0("output/", details$companyname)
-# 
-# names(details)
-# 
-# file.remove(dir)
-# dir.create(dir)
-# 
-# if (!file.exists(dir)){
-#   print('dir does not exist')
-# } else {
-#   print('dir already exists')
-# }
-
-detailscurrent <- as.character(as.vector(details[1,]))
-
-file.copy(from = "template/letter.tex", to = "output/lettertest/letter.tex", overwrite = T)
-
-filename <- "output/lettertest/letter.tex"
-fileconnection <- file(filename)
-content <- readLines(filename)
-contentadj <- content
-
-for (j in nrow(details)){
-  for (i in seq_along(details)) {
-    var <- names(details)[i]
-    varcont <- details[j,i]
-    pattern <- paste0('\\newcommand{\\', var, '}{', var, '}')
-    replacement <- paste0("\\newcommand{\\", var, "}{", varcont, "}")
-    contentadj <- gsub(pattern, replacement, contentadj, fixed = T, perl = F)
+create_dirs <- function(x="lettertest/") {
+  x <- paste0("output/",x)
+  if (!file.exists(x)){
+    print(paste0('creating the dir ', x))
+    dir.create(x)
+    file.copy(from = "template/letter.tex", to = paste0(x,"/letter.tex"), overwrite = T)
+  } else {
+    print(paste0('dir ', x, 'already exists, but copying the directory anyway for now, poissbly overwriting the files in it..'))
+    file.copy(from = "template/letter.tex", to = paste0(x,"/letter.tex"), overwrite = T)
   }
 }
 
-writeLines(contentadj, fileconnection)
-close(fileconnection)
+company <- detailscase$companynameshort
+create_dirs(x=company)
 
-system(paste("pdflatex", filename))
+compose_letter <- function(x) {
+  filename <- paste0("output/", x$companynameshort, "/letter.tex")
+  fileconnection <- file(filename)
+  content <- readLines(filename)
+  contentadj <- content
+  for (i in ncol(details)) {
+    var <- names(details)[i]
+    pattern <- paste0('\\newcommand{\\', var, '}{', var, '}')
+    replacement <- paste0("\\newcommand{\\", var, "}{", details[i], "}")
+    contentadj <- gsub(pattern, replacement, contentadj, fixed = T, perl = F)
+  }
+  writeLines(contentadj, fileconnection)
+  close(fileconnection)
+}
+
+compose_letter(x=detailscase)
