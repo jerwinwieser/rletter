@@ -2,6 +2,11 @@
 library(dplyr)
 library(purrr)
 
+unlink("output", recursive=T)
+unlink("pdf", recursive=T)
+dir.create("output")
+dir.create("pdf")
+
 # read csv file -----------------------------------------------------------
 df <- read.csv2("details.csv", stringsAsFactors = F)
 
@@ -12,12 +17,12 @@ create_dirs <- function(x=df) {
   filenamenew <- paste0(dir,"/", x[["companynameshort"]], "_letter_", letterdate, ".tex")
   if (!file.exists(dir)){
     # if the file does not yet exist, create it 
-    print(paste0('creating the dir ', x))
+    print(paste0('creating the dir ', dir))
     dir.create(dir)
     file.copy(from = "template/letter.tex", to = filenamenew, overwrite = T)
   } else {
     # if the file does exist, overwrite the existing one for now
-    print(paste0('dir ', x, 'already exists, but copying the directory anyway for now, poissbly overwriting the files in it..'))
+    print(paste0('dir ', dir, 'already exists, but copying the directory anyway for now, poissbly overwriting the files in it..'))
     file.copy(from = "template/letter.tex", to = filenamenew, overwrite = T)
   }
 }
@@ -41,7 +46,7 @@ compose_letter <- function(x=df) {
 }
 
 # apply functions ---------------------------------------------------------
-for (i in c(1,2)){
+for (i in seq_along(df)){
   create_dirs(df[i,])
   compose_letter(df[i,])
 }
@@ -50,7 +55,7 @@ for (i in c(1,2)){
 # system('bash compile_latex_pdf.sh')
 
 # list pdf files ----------------------------------------------------------
-files <- list.files("output", full.names = T, recursive = T, pattern = ".pdf")
-file.copy(from = files, to = "pdf/", overwrite = T)
+# files <- list.files("output", full.names = T, recursive = T, pattern = ".pdf")
+# file.copy(from = files, to = "pdf/", overwrite = T)
 
           
