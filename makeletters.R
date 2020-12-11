@@ -47,9 +47,10 @@ for (i in c(1,2)){
 }
 
 # compile pdfs ------------------------------------------------------------
-system('bash compile_latex_pdf.sh')
+# system('bash compile_latex_pdf.sh')
 
 # list pdf files ----------------------------------------------------------
-files <- list.files("output", full.names = T, recursive = T)
-filespdf <- grep(".pdf", files, value =T)
+files <- list.files("output", full.names = T, recursive = T, pattern = ".pdf")
+file.copy(from = files, to = "pdf/", overwrite = T)
 
+          

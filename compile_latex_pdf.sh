@@ -1,6 +1,6 @@
 DIRS=$(ls -d output/*)
-FILES=$(find output/* | grep '.tex$')
 for DIR in $DIRS
 do
-	pdflatex -aux-directory=$DIR -output-directory=$DIR $FILES
+	FILE=$(find $DIR | grep '.tex$')
+	pdflatex -aux-directory=$DIR -output-directory=$DIR $FILE
 done	
