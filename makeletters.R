@@ -7,29 +7,33 @@ df <- read.csv2("details.csv", stringsAsFactors = F)
 
 # create dirs -------------------------------------------------------------
 create_dirs <- function(x=df) {
-  x <- paste0("output/",x[["companynameshort"]])
-  if (!file.exists(x)){
+  dir <- paste0("output/", x[["companynameshort"]])
+  letterdate <- gsub("/", "-", x[["letterdate"]])
+  filenamenew <- paste0(dir,"/", x[["companynameshort"]], "_letter_", letterdate, ".tex")
+  if (!file.exists(dir)){
     # if the file does not yet exist, create it 
     print(paste0('creating the dir ', x))
-    dir.create(x)
-    file.copy(from = "template/letter.tex", to = paste0(x,"/letter.tex"), overwrite = T)
+    dir.create(dir)
+    file.copy(from = "template/letter.tex", to = filenamenew, overwrite = T)
   } else {
     # if the file does exist, overwrite the existing one for now
     print(paste0('dir ', x, 'already exists, but copying the directory anyway for now, poissbly overwriting the files in it..'))
-    file.copy(from = "template/letter.tex", to = paste0(x,"/letter.tex"), overwrite = T)
+    file.copy(from = "template/letter.tex", to = filenamenew, overwrite = T)
   }
 }
 
 # compose the letter ------------------------------------------------------
 compose_letter <- function(x=df) {
-  filename <- paste0("output/", x[["companynameshort"]], "/letter.tex")
+  letterdate <- gsub("/", "-", x[["letterdate"]])
+  filename <- paste0("output/", x[["companynameshort"]], "/", x[["companynameshort"]], "_letter_", letterdate, ".tex")
+  print(filename)
   fileconnection <- file(filename)
   content <- readLines(filename)
   contentadj <- content
-  for (i in c(1:ncol(details))) {
-    var <- names(details)[i]
+  for (i in c(1:ncol(x))) {
+    var <- names(x)[i]
     pattern <- paste0('\\newcommand{\\', var, '}{', var, '}')
-    replacement <- paste0("\\newcommand{\\", var, "}{", details[i], "}")
+    replacement <- paste0("\\newcommand{\\", var, "}{", x[i], "}")
     contentadj <- gsub(pattern, replacement, contentadj, fixed = T, perl = F)
   }
   writeLines(contentadj, fileconnection)
