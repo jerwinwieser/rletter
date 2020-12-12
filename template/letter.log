@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.11)  12 DEC 2020 00:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.11)  12 DEC 2020 19:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -163,6 +163,19 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen147
 \Gm@dimlist=\toks16
 )
+
+! LaTeX Error: File `times.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+! Interruption.
+<to be read again> 
+                   }
+l.30 ^^M
+        
+? 
 (/home/jwr/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-05-05 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count181
@@ -265,10 +278,10 @@ Package rerunfilecheck Info: File `letter.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 60.
  ) 
 Here is how much of TeX's memory you used:
- 4819 strings out of 482604
- 75752 string characters out of 5952182
- 331605 words of memory out of 5000000
- 20364 multiletter control sequences out of 15000+600000
+ 4823 strings out of 482604
+ 75801 string characters out of 5952182
+ 331607 words of memory out of 5000000
+ 20368 multiletter control sequences out of 15000+600000
  532646 words of font info for 25 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  34i,6n,29p,235b,340s stack positions out of 5000i,500n,10000p,200000b,80000s

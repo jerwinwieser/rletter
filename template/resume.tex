@@ -1,0 +1,148 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{times}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+\item\small{
+\textbf{#1}{: #2 \vspace{-2pt}}
+}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{-1pt}\item
+\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{#1} & #2 \\
+\textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\usepackage{hyperref}
+\hypersetup{pdfstartview=}
+
+
+
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{\href{https://www.linkedin.com/in/jerwin-wieser/}{\Large Jerwin Wieser}} & Email : \href{mailto:j2.wieser@gmail.com}{j2.wieser@gmail.com}\\
+\href{https://www.linkedin.com/in/jerwin-wieser/}{linkedin.com/in/jerwin-wieser} & Phone : +31 6-45964825\\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Working Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Dutch Institute for Clinical Autiting}{Leiden, The Netherlands}{Data Scientist}{Mar 2020 -- current}
+\resumeItemListStart
+\resumeItem{Data Collection}{Coordination of data collection, gathering data from source documents and databases and checking correctness and plausibility.}
+\resumeItemListEnd
+
+\resumeSubheading
+{VU Medical Center Amsterdam}{Amsterdam, The Netherlands}{Data Manager \& Trial Coordinator -- Departement of Oncologie}{Nov 2018 -- Apr 2019}
+\resumeItemListStart
+\resumeItem{Data Collection}{Coordination of data collection, gathering data from source documents and databases and checking correctness and plausibility.}
+\resumeItem{Research}{Coordination of proposal-/starting phase of a clinical research trials, submitting research protocols to the Research Committee, Medical Ethics Committee, and to audit an adequate execution of clinical trials according to study protocols, international regulations, and ICH-GCP guidelines. }
+\resumeItemListEnd
+
+\resumeSubheading
+{VU University Amsterdam}{Amsterdam, The Netherlands}{Study Coordinator -- Faculty of Behavioral and Movement Sciences}{Okt 2016 -- Okt 2018}
+\resumeItemListStart
+\resumeItem{Project member}{Responsible for the development of a digital pre-master program (e-learning) for students with a background in Physical Education and Physical Therapy that opt for a master in Human Movement Sciences.}
+\resumeItem{Coordinator}{Of above-mentioned pre-master program, in collaboration with Academies for Physical Education of the Universities of Applied Sciences in Amsterdam, Zwolle, The Hague, and Leiden.}
+\resumeItem{Assistant Lecturer -- Mathematics}{First-year bachelor course Human Movement Sciences with the following subjects: differential and integral calculus, differential equations, vector and matrix calculus.}
+\resumeItem{Assistant Lecturer -- Matlab}{First-year bachelor course Human Movement Sciences for processing of digital signals and programming in Matlab.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Academic Medical Center Amsterdam}{Amsterdam, The Netherlands}{Intern -- Department of Rehabilitation}{Feb 2016 -- Jul 2016}
+\resumeItemListStart
+\resumeItem{Movement Analysis}{Preparation, execution, and analyses of 3D movement registrations in patient with walking problems as result of a neuromuscular disorder. Programs for data analyses and visualization were self written in Matlab.}
+\resumeItem{Data Collection}{Conduction of tests related to muscle force and metabolic energy usage in the above-mentioned patient group.}
+\resumeItem{Scientific Writing}{Master thesis with the title 'Compensation strategies in patients with calf muscle weakness', under supervision of Prof. Jaap Harlaar.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{VU University Amsterdam}{Amsterdam, The Netherlands}{Master of Science (MSc.) in Human Movement Sciences}{Sep 2014 -- Aug 2016}
+\resumeSubheading
+{The Hague University of Applied Sciences}{The Hague, The Netherlands}{Bachelor of Engineering (BEng.) in Human Kinetic Technology}{Sep 2010 -- Aug 2014}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Separate Courses}
+\resumeSubHeadingListStart
+\resumeSubItem{Data science at the command line, datascienceworkshop.com}{automate tasks, parallelise and disdribute tasks to multiple cores and machines, and inspect, transform and visualise data (certificate achieved -- Oct 2020).}
+\resumeSubItem{Data analysis in Python, DataCamp (online); subjects s.a.}{'importing \& cleaning data', 'programming', 'data manipulation', 'data visualization', 'probability \& statistics', 'machine learning' (ccertificates achieved -- Okt 2019).}
+\resumeSubItem{Data analysis in R, Vrije Universiteit Amsterdam (VU Amsterdam), Summerschool}{Completed with two analytical reports; assessed with 9/10 en 10/10 (certificate achieved -- Jul 2018).}
+\resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Software Skills \& Hobbies}
+\resumeSubHeadingListStart
+\item{
+\textbf{Languages}{: R, Python, Matlab, Bash}
+\hfill
+\textbf{Technologies}{: R Shiny, Docker, Golem, Django, Git}
+\newline
+\textbf{Hobbies}{: reading, photography, cycling \& running}
+}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
