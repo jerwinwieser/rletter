@@ -2,7 +2,7 @@ output
 pdf
 template/
 details.csv
-
+check/
 .Rproj.user
 .Rhistory
 .RData
