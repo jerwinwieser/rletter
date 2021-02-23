@@ -1,6 +1,6 @@
 output
 pdf
-
+template/
 details.csv
 
 .Rproj.user
